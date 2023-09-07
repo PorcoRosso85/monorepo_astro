@@ -1,0 +1,20 @@
+{
+  "name": "monorepo_astro",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "npx only-allow pnpm",
+    "build": "turbo build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@8.6.12",
+  "engines": {
+    "pnpm": ">=8.6.12"
+  },
+  "devDependencies": {
+    "turbo": "^1.10.13"
+  }
+}
