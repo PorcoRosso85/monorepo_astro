@@ -1,7 +1,9 @@
-# Logs
-logs
-!/src/domain/logs
+# Ignore all log files
 *.log
+# Ignore all directories named logs
+logs/
+# But do not ignore ./packages/domain/src/logs
+!packages/domain/src/logs/
 pnpm-debug.log*
 
 node_modules
