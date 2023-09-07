@@ -10,6 +10,7 @@ node_modules
 dist
 dist-ssr
 *.local
+samples
 
 # Editor directories and files
 # .vscode/*
@@ -24,3 +25,4 @@ dist-ssr
 .env
 
 *.lock
+*-lock.*
