@@ -1,0 +1,5 @@
+{
+  "testing.automaticallyOpenPeekView": "never",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "svg.preview.background": "editor"
+}
