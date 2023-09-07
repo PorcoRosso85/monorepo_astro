@@ -1,5 +1,5 @@
 {
-  "name": "libA",
+  "name": "domain",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
@@ -8,7 +8,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "typescript": "^5.2.2"
   }

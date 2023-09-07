@@ -1,5 +1,5 @@
 {
-  "name": "libB",
+  "name": "infra",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
@@ -13,6 +13,6 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "libA": "workspace:*"
+    "domain": "link:../domain"
   }
 }
