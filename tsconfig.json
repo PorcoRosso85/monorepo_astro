@@ -33,5 +33,5 @@
 
     "experimentalDecorators": true
   },
-  "exclude": ["node_modules", "**/*samples*/*"]
+  "exclude": ["node_modules", "**/*samples*/*", "**/*dist*/*"]
 }

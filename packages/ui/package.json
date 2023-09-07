@@ -1,0 +1,20 @@
+{
+  "name": "ui",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^3.0.10",
+    "graphology": "^0.25.4",
+    "sigma": "^3.0.0-alpha3"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
