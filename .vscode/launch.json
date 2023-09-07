@@ -5,6 +5,7 @@
       "type": "node",
       "request": "launch",
       "name": "vitest ${file}",
+      "runtimeExecutable": "npx",
       "autoAttachChildProcesses": true,
       "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
       "program": "${workspaceRoot}/node_modules/vitest/vitest.mjs",
@@ -15,20 +16,33 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "vite-node",
+      "name": "vite",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["vite-node", "${file}"],
+      "runtimeArgs": ["vite"],
       "skipFiles": ["<node_internals>/**"],
       "internalConsoleOptions": "neverOpen",
       "console": "integratedTerminal"
     },
     {
+      "name": "ui dev",
       "type": "node",
       "request": "launch",
-      "name": "vite",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["vite"],
+      "cwd": "${workspaceFolder}/packages/ui",
+      "runtimeExecutable": "${workspaceFolder}/.devbox/virtenv/.wrappers/bin/pnpm",
+      "runtimeArgs": ["dev"],
       "skipFiles": ["<node_internals>/**"],
+      "internalConsoleOptions": "neverOpen",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "ui build"
+    },
+    {
+      "name": "vite-node ${file}",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceFolder}/.devbox/virtenv/.wrappers/bin/pnpm",
+      "runtimeArgs": ["vite-node", "${file}"],
       "internalConsoleOptions": "neverOpen",
       "console": "integratedTerminal"
     }

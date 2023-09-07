@@ -1,28 +1,16 @@
 import Sigma from "sigma";
 import Graph from "graphology";
 
+import { addingNode } from "../utils/AddNodes";
+import { addingEdge } from "../utils/AddEdges";
+import { container } from "../utils/gettingContainer";
+import { SelectorDefinitions } from "../utils/SelectorDefinitions";
+
 // Graphologyのインスタンスを作成
 const graph = new Graph();
 
-// ノードを追加
-graph.addNode("n1", {
-  label: "Node 1",
-  x: Math.random(),
-  y: Math.random(),
-  size: 5,
-});
-graph.addNode("n2", {
-  label: "Node 2",
-  x: Math.random(),
-  y: Math.random(),
-  size: 5,
-});
-//
-// エッジを追加
-graph.addEdge("n1", "n2", { id: "e1" });
-
-// コンテナを取得
-const container = document.getElementById("container") as HTMLElement;
+addingNode(graph);
+addingEdge(graph);
 
 // Sigmaのインスタンスを作成
 const renderer = new Sigma(graph, container);
@@ -49,7 +37,7 @@ renderer.on("clickNode", (event) => {
   const nodeData = graph.getNodeAttributes(nodeId);
 
   // Update the dialog content
-  const nodeInfo = document.getElementById("nodeInfo");
+  const nodeInfo = document.getElementById(SelectorDefinitions.nodeInfo_divId);
   if (nodeInfo) {
     nodeInfo.innerHTML = `
       Node clicked:<br>
