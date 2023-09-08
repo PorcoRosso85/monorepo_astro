@@ -1,13 +1,14 @@
 import { dialog, closeDialog } from "./DialogManage";
 import { graphInstance } from "../service/GraphInstance";
+import Sigma from "sigma";
 
-export function registerCloseButtonEvent(closeBtn) {
+export function registerCloseButtonEvent(closeBtn: Element) {
   if (closeBtn) {
     closeBtn.addEventListener("click", closeDialog);
   }
 }
 
-export function registerNodeClickEvent(renderer) {
+export function registerNodeClickEvent(renderer: Sigma) {
   renderer.on("clickNode", (event) => {
     const nodeId = event.node;
     const nodeData = graphInstance().getNodeAttributes(nodeId);

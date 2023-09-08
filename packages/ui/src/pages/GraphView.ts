@@ -17,5 +17,7 @@ import {
 } from "../utils/EventHandler";
 
 const closeBtn = document.querySelector(".closeBtn");
-registerCloseButtonEvent(closeBtn);
-registerNodeClickEvent(renderer);
+if (closeBtn !== null) {
+  registerCloseButtonEvent(closeBtn);
+  registerNodeClickEvent(renderer);
+}
