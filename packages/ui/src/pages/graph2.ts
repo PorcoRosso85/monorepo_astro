@@ -5,15 +5,9 @@ import { addingNode } from "../utils/AddNodes";
 import { addingEdge } from "../utils/AddEdges";
 import { container } from "../utils/gettingContainer";
 import { SelectorDefinitions } from "../utils/SelectorDefinitions";
+import { graphInstance } from "../service/GraphInstance";
 
-// Graphologyのインスタンスを作成
-const graph = new Graph();
-
-addingNode(graph);
-addingEdge(graph);
-
-// Sigmaのインスタンスを作成
-const renderer = new Sigma(graph, container);
+const renderer = new Sigma(graphInstance(), container);
 
 // グラフを描画（通常は不要で、レンダラが自動で描画を管理します）
 renderer.refresh();
@@ -34,7 +28,7 @@ if (closeBtn) {
 // Node click event handler
 renderer.on("clickNode", (event) => {
   const nodeId = event.node;
-  const nodeData = graph.getNodeAttributes(nodeId);
+  const nodeData = graphInstance().getNodeAttributes(nodeId);
 
   // Update the dialog content
   const nodeInfo = document.getElementById(SelectorDefinitions.nodeInfo_divId);
