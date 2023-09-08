@@ -1,7 +1,5 @@
 import Graph from "graphology";
-import AbstractGraph from "graphology-types";
-
-type AddNodeParams = Parameters<AbstractGraph["addNode"]>;
+import { AddNodeParams } from "../interface/AddNodeParams";
 
 export const addingNode = (graph: Graph) => {
   const params01: AddNodeParams = [
