@@ -13,9 +13,12 @@
     "@trpc/client": "^10.38.1",
     "astro": "^3.0.10",
     "graphology": "^0.25.4",
+    "graphology-types": "^0.24.7",
     "sigma": "^3.0.0-alpha3"
   },
   "devDependencies": {
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vitest": "^0.34.3"
   }
 }
