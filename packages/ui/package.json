@@ -14,9 +14,12 @@
     "astro": "^3.0.10",
     "graphology": "^0.25.4",
     "graphology-types": "^0.24.7",
+    "open-props": "^1.5.15",
     "sigma": "^3.0.0-alpha3"
   },
   "devDependencies": {
+    "@acab/ecsstatic": "^0.7.1",
+    "@styled/typescript-styled-plugin": "^1.0.0",
     "typescript": "^5.2.2",
     "vite": "^4.4.9",
     "vitest": "^0.34.3"
