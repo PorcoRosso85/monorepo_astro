@@ -1,5 +1,4 @@
 ---
-import '../styles/global.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = Astro.props;
@@ -7,10 +6,13 @@ const pageTitle = Astro.props;
 import Graph from './graph.astro';
 import Modal from '../components/Modal.astro'
 
-import Ecsstatic from './ecsstatic.astro';
+import VanillaExtract from './vanillaExtract.astro'
+const sideBarActiveItemID = "home"
 ---
-<h3>webgl...</h3>
-<Graph />
-<h3>...webgl</h3>
-<Modal />
-<Ecsstatic />
+<BaseLayout sideBarActiveItemID={sideBarActiveItemID}>
+    <h3>webgl...</h3>
+    <Graph />
+    <h3>...webgl</h3>
+    <Modal />
+    <VanillaExtract />
+</BaseLayout>
