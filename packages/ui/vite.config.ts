@@ -1,6 +1,5 @@
 /// <reference types="vitest" />
 import { defineConfig } from "vite";
-import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 
 export default defineConfig({
   define: {
@@ -8,6 +7,6 @@ export default defineConfig({
   },
   test: {
     includeSource: ["src/**/*.{js,ts}"],
+    setupFiles: ["./vitest.setup.ts"],
   },
-  plugins: [vanillaExtractPlugin({})],
 });
