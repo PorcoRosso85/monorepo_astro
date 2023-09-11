@@ -40,6 +40,7 @@ server.use(
 );
 
 server.listen(3000);
+console.log("http://localhost:3000/api/trpc");
 
 if (import.meta.vitest) {
 }
