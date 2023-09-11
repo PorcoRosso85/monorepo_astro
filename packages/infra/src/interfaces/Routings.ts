@@ -1,4 +1,4 @@
-import { publicProcedure } from "./TrpcInstances";
+import { publicProcedure } from "./trpc";
 import { indexObject } from "../database/dao/IndexObject";
 
 export const routings = {

@@ -5,7 +5,8 @@
   "main": "./dist/index.js",
   "scripts": {
     "build": "tsc ./src/index.ts --outDir ./dist --declaration",
-    "type": "tsc -p ."
+    "type": "tsc -p .",
+    "dev": "pnpm vite-node ./src/interfaces/TrpcService.ts"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
     "cors": "^2.8.5",
     "typescript": "^5.2.2",
     "vite": "^4.4.9",
+    "vite-node": "^0.34.4",
     "vitest": "^0.34.3"
   },
   "dependencies": {

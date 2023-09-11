@@ -1,12 +1,17 @@
 import { initTRPC } from "@trpc/server";
-import { router } from "./TrpcInstances";
+import { router } from "./trpc";
 import { routings } from "./Routings";
 import { createHTTPServer } from "@trpc/server/adapters/standalone";
 import * as trpcExpress from "@trpc/server/adapters/express";
 import cors from "cors";
 import express from "express";
+import { greetingRouter } from "./routers/greeting";
+import { todosRouter } from "./routers/todos";
 
-const appRouter = router(routings);
+const appRouter = router({
+  greeting: greetingRouter,
+  todos: todosRouter,
+});
 
 export type AppRouter = typeof appRouter;
 
